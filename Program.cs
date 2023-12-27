@@ -11,7 +11,19 @@ namespace Linq
         static void Main(string[] args)
         {
             var books = new BookRepository().GetBooks();
-            var cheapBooks = books.Where(b => b.Price < 10).OrderBy(b => b.Title).Select(b => b.Title);
+
+            //LINQ Query operators
+            //var cheapBooks = 
+            //    from b in books
+            //    where b.Price < 10
+            //    orderby b.Title
+            //    select b.Title;
+
+            // LINQ Extention Methods
+            var cheapBooks = books
+                .Where(b => b.Price < 10)
+                .OrderBy(b => b.Title)
+                .Select(b => b.Title);
 
             foreach ( var book in cheapBooks )
             {
