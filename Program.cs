@@ -21,16 +21,27 @@ namespace Linq
 
             // LINQ Extention Methods
             var cheapBooks = books
-                .Where(b => b.Price < 10)
+                .Where(b => b.Price < 7)
                 .OrderBy(b => b.Title)
                 .Select(b => b.Title);
 
             foreach ( var book in cheapBooks )
             {
                 Console.WriteLine(book);
-                //Console.WriteLine(book.Title + "" + book.Price);
+                //Console.WriteLine($"{book} Price: {book.Price}");
             }
-                Console.ReadLine();
+
+            var book1 = books.Single(b => b.Title == "ASP.NET MVC");
+            var book2 = books.FirstOrDefault(b => b.Title == "C# Advanced Topics");
+            var book3 = books.LastOrDefault(b => b.Title == "C# Advanced Topics");
+            Console.WriteLine();
+            Console.WriteLine("Single Books ");
+            Console.WriteLine($"{book1.Title} Price: {book1.Price}");
+            Console.WriteLine($"{book2.Title} Price: {book2.Price}");
+            Console.WriteLine($"{book3.Title} Price: {book3.Price}");
+
+
+            Console.ReadLine();
         }
     }
 }
