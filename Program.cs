@@ -35,10 +35,10 @@ namespace Linq
             var book2 = books.FirstOrDefault(b => b.Title == "C# Advanced Topics");
             var book3 = books.LastOrDefault(b => b.Title == "C# Advanced Topics");
             Console.WriteLine();
-            Console.WriteLine("Single Books ");
-            Console.WriteLine($"{book1.Title} Price: {book1.Price}");
-            Console.WriteLine($"{book2.Title} Price: {book2.Price}");
-            Console.WriteLine($"{book3.Title} Price: {book3.Price}");
+            Console.WriteLine("\tSingle Books ");
+            Console.WriteLine($"{book1.Title}\t\t Price: {book1.Price}");
+            Console.WriteLine($"{book2.Title}\t Price: {book2.Price}");
+            Console.WriteLine($"{book3.Title}\t Price: {book3.Price}");
 
 
             Console.ReadLine();
